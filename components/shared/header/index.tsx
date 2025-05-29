@@ -49,7 +49,7 @@ const Header = async () => {
           {data.headerMenus.map((menu) => (
             <Link
               key={menu.name}
-              href={menu.path}
+              href={menu.href}
               className="header-button !p-1"
             >
               {menu.name}
