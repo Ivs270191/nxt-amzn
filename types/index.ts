@@ -1,23 +1,23 @@
-// // import {
-// //   CarouselSchema,
-// //   CartSchema,
-// //   DeliveryDateSchema,
-// //   OrderInputSchema,
-// //   OrderItemSchema,
-// //   PaymentMethodSchema,
-// //   ProductInputSchema,
-// //   ReviewInputSchema,
-// //   SettingInputSchema,
-// //   ShippingAddressSchema,
-// //   SiteCurrencySchema,
-// //   SiteLanguageSchema,
-// //   UserInputSchema,
-// //   UserNameSchema,
-// //   UserSignInSchema,
-// //   UserSignUpSchema,
-// //   WebPageInputSchema,
-// // } from "@/lib/validator";
-// // import { z } from "zod";
+import {
+  //   CarouselSchema,
+  //   CartSchema,
+  //   DeliveryDateSchema,
+  //   OrderInputSchema,
+  //   OrderItemSchema,
+  //   PaymentMethodSchema,
+  ProductInputSchema,
+  //   ReviewInputSchema,
+  //   SettingInputSchema,
+  //   ShippingAddressSchema,
+  //   SiteCurrencySchema,
+  //   SiteLanguageSchema,
+  //   UserInputSchema,
+  //   UserNameSchema,
+  //   UserSignInSchema,
+  //   UserSignUpSchema,
+  //   WebPageInputSchema,
+} from "@/lib/validator";
+import { z } from "zod";
 
 // // export type IReviewInput = z.infer<typeof ReviewInputSchema>;
 // // export type IReviewDetails = IReviewInput & {
@@ -27,30 +27,30 @@
 // //     name: string;
 // //   };
 // // };
-// // export type IProductInput = z.infer<typeof ProductInputSchema>;
+export type IProductInput = z.infer<typeof ProductInputSchema>;
 
-// export type Data = {
-//   settings: ISettingInput[];
-//   webPages: IWebPageInput[];
-//   users: IUserInput[];
-// //   products: IProductInput[];
-//   reviews: {
-//     title: string;
-//     rating: number;
-//     comment: string;
-//   }[];
-//   headerMenus: {
-//     name: string;
-//     href: string;
-//   }[];
-//   carousels: {
-//     image: string;
-//     url: string;
-//     title: string;
-//     buttonCaption: string;
-//     isPublished: boolean;
-//   }[];
-// };
+export type Data = {
+  //   settings: ISettingInput[];
+  //   webPages: IWebPageInput[];
+  //   users: IUserInput[];
+  products: IProductInput[];
+  //   reviews: {
+  //     title: string;
+  //     rating: number;
+  //     comment: string;
+  //   }[];
+  headerMenus: {
+    name: string;
+    href: string;
+  }[];
+  carousels: {
+    image: string;
+    url: string;
+    title: string;
+    buttonCaption: string;
+    isPublished: boolean;
+  }[];
+};
 // // Order
 // // export type IOrderInput = z.infer<typeof OrderInputSchema>;
 // // export type IOrderList = IOrderInput & {
