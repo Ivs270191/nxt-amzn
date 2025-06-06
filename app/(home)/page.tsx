@@ -10,6 +10,7 @@ import {
 import { toSlug } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import ProductSlider from "@/components/shared/product/product-slider";
+import BrowsingHistoryList from "@/components/shared/browsing-history-list";
 
 export default async function page() {
   const { carousels } = data;
@@ -87,6 +88,9 @@ export default async function page() {
             />
           </CardContent>
         </Card>
+        <div className="p-4 bg-background">
+          <BrowsingHistoryList />
+        </div>
       </div>
     </>
   );

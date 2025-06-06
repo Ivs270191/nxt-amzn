@@ -11,9 +11,9 @@ import {
 import SelectVariant from "@/components/shared/product/select-variant";
 import ProductPrice from "@/components/shared/product/product-price";
 import ProductGallery from "@/components/shared/product/product-gallery";
-// import AddToBrowsingHistory from "@/components/shared/product/add-to-browsing-history";
+import AddToBrowsingHistory from "@/components/shared/product/add-to-browsing-history";
 import { Separator } from "@/components/ui/separator";
-// import BrowsingHistoryList from "@/components/shared/browsing-history-list";
+import BrowsingHistoryList from "@/components/shared/browsing-history-list";
 // import RatingSummary from "@/components/shared/product/rating-summary";
 import ProductSlider from "@/components/shared/product/product-slider";
 import Rating from "@/components/shared/product/rating";
@@ -59,7 +59,7 @@ export default async function ProductDetails(props: {
   //   const t = await getTranslations();
   return (
     <div>
-      {/* //   <AddToBrowsingHistory id={product._id} category={product.category} /> */}
+      <AddToBrowsingHistory id={product._id} category={product.category} />
       <section>
         <div className="grid grid-cols-1 md:grid-cols-5  ">
           <div className="col-span-2">
@@ -156,9 +156,9 @@ export default async function ProductDetails(props: {
           title={`Best Sellers in ${product.category}`}
         />
       </section>
-      {/* <section>
+      <section>
         <BrowsingHistoryList className="mt-10" />
-      </section> */}
+      </section>
     </div>
   );
 }
