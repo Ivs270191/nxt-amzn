@@ -6,3 +6,5 @@ export const APP_DESCRIPTION =
   "An Amazon clone built with Next.js and Tailwind CSS";
 
 export const PAGE_SIZE = Number(process.env.PAGE_SIZE) || 9;
+export const FREE_SHIPPING_MINIMUM_PRICE =
+  Number(process.env.FREE_SHIPPING_MINIMUM_PRICE) || 35;

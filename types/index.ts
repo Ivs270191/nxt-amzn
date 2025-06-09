@@ -1,9 +1,11 @@
 import {
+  CartSchema,
+  OrderItemSchema,
   //   CarouselSchema,
-  //   CartSchema,
+
   //   DeliveryDateSchema,
   //   OrderInputSchema,
-  //   OrderItemSchema,
+
   //   PaymentMethodSchema,
   ProductInputSchema,
   //   ReviewInputSchema,
@@ -61,8 +63,8 @@ export type Data = {
 // //   };
 // //   createdAt: Date;
 // // };
-// // export type OrderItem = z.infer<typeof OrderItemSchema>;
-// // export type Cart = z.infer<typeof CartSchema>;
+export type OrderItem = z.infer<typeof OrderItemSchema>;
+export type Cart = z.infer<typeof CartSchema>;
 // // export type ShippingAddress = z.infer<typeof ShippingAddressSchema>;
 
 // // // user

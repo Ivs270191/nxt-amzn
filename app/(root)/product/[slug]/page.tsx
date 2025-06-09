@@ -1,5 +1,5 @@
 // import { auth } from "@/auth";
-// import AddToCart from "@/components/shared/product/add-to-cart";
+import AddToCart from "@/components/shared/product/add-to-cart";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   getProductBySlug,
@@ -7,7 +7,7 @@ import {
 } from "@/lib/actions/product.actions";
 
 // import ReviewList from "./review-list";
-// import { generateId, round2 } from "@/lib/utils";
+import { generateId, round2 } from "@/lib/utils";
 import SelectVariant from "@/components/shared/product/select-variant";
 import ProductPrice from "@/components/shared/product/product-price";
 import ProductGallery from "@/components/shared/product/product-gallery";
@@ -120,7 +120,7 @@ export default async function ProductDetails(props: {
                   <div className="text-destructive text-xl">Out of stock</div>
                 )}
 
-                {/* {product.countInStock !== 0 && (
+                {product.countInStock !== 0 && (
                   <div className="flex justify-center items-center">
                     <AddToCart
                       item={{
@@ -138,7 +138,7 @@ export default async function ProductDetails(props: {
                       }}
                     />
                   </div>
-                )} */}
+                )}
               </CardContent>
             </Card>
           </div>
