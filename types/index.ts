@@ -16,7 +16,7 @@ import {
   //   SiteCurrencySchema,
   //   SiteLanguageSchema,
   //   UserNameSchema,
-  //   UserSignUpSchema,
+  UserSignUpSchema,
   //   WebPageInputSchema,
 } from "@/lib/validator";
 import { z } from "zod";
@@ -70,7 +70,7 @@ export type Cart = z.infer<typeof CartSchema>;
 // // // user
 export type IUserInput = z.infer<typeof UserInputSchema>;
 export type IUserSignIn = z.infer<typeof UserSignInSchema>;
-// // export type IUserSignUp = z.infer<typeof UserSignUpSchema>;
+export type IUserSignUp = z.infer<typeof UserSignUpSchema>;
 // // export type IUserName = z.infer<typeof UserNameSchema>;
 
 // // // webpage

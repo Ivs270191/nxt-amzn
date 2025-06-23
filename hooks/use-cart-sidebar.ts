@@ -8,7 +8,7 @@ import useCartStore from "./use-cart-store";
 //   .map((locale) => locale.code);
 
 const isNotInPaths = (s: string) =>
-  !/^\/(cart|checkout|order|orders|account)/.test(s);
+  !/^\/(cart|checkout|order|orders|sign-in|sign-up|account)/.test(s);
 
 function useCartSidebar() {
   const {
