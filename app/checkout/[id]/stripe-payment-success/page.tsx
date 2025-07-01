@@ -31,9 +31,7 @@ export default async function SuccessPage(props: {
     return notFound();
 
   const isSuccess = paymentIntent.status === "succeeded";
-  if (isSuccess) {
-    order.isPaid = true;
-  }
+
   if (!isSuccess) return redirect(`/checkout/${id}`);
   return (
     <div className="max-w-4xl w-full mx-auto space-y-8">
