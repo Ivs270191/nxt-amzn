@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { APP_NAME } from "@/lib/constants";
 import Menu from "./menu";
-
-import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
 import data from "@/lib/data";
 import Search from "./search";
+import Sidebar from "./sidebar";
+import { getAllCategories } from "@/lib/actions/product.actions";
 
 const Header = async () => {
+  const categories = await getAllCategories();
   return (
     <header className="bg-black text-white">
       <div className="p-2">
@@ -38,13 +38,7 @@ const Header = async () => {
         </div>
       </div>
       <div className="flex items-center bg-gray-800 gap-3">
-        <Button
-          variant="ghost"
-          className="header-button flex items-center gap-1 text-base [&_svg]: size-12"
-        >
-          <MenuIcon />
-          All
-        </Button>
+        <Sidebar categories={categories} />
         <div className="flex items-center flex-wrap gap-3 overflow-hidden max-h-[42px]">
           {data.headerMenus.map((menu) => (
             <Link
