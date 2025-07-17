@@ -24,10 +24,8 @@ export default async function UserButton() {
         <DropdownMenuTrigger className="header-button" asChild>
           <div className="flex items-center">
             <div className="flex flex-col text-xs text-left">
-              <span>
-                Header.Hello, {session ? session.user.name : "Header.sign in"}
-              </span>
-              <span className="font-bold">Header.Account & Orders</span>
+              <span>Hello, {session ? session.user.name : "sign in"}</span>
+              <span className="font-bold">Account & Orders</span>
             </div>
             <ChevronDownIcon />
           </div>
@@ -46,15 +44,15 @@ export default async function UserButton() {
             </DropdownMenuLabel>
             <DropdownMenuGroup>
               <Link className="w-full" href="/account">
-                <DropdownMenuItem>Header.Your account</DropdownMenuItem>
+                <DropdownMenuItem>Your account</DropdownMenuItem>
               </Link>
               <Link className="w-full" href="/account/orders">
-                <DropdownMenuItem>Header.Your orders</DropdownMenuItem>
+                <DropdownMenuItem>Your orders</DropdownMenuItem>
               </Link>
 
               {session.user.role === "Admin" && (
                 <Link className="w-full" href="/admin/overview">
-                  <DropdownMenuItem>Header.Admin</DropdownMenuItem>
+                  <DropdownMenuItem>Admin</DropdownMenuItem>
                 </Link>
               )}
             </DropdownMenuGroup>
@@ -64,7 +62,7 @@ export default async function UserButton() {
                   className="w-full py-4 px-2 h-4 justify-start"
                   variant="ghost"
                 >
-                  Header.Sign out
+                  Sign out
                 </Button>
               </form>
             </DropdownMenuItem>
@@ -77,14 +75,13 @@ export default async function UserButton() {
                   className={cn(buttonVariants(), "w-full")}
                   href="/sign-in"
                 >
-                  Header.Sign in
+                  Sign in
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuLabel>
               <div className="font-normal">
-                {"Header.New Customer"}?{" "}
-                <Link href="/sign-up">Header.Sign up</Link>
+                {"New Customer"}? <Link href="/sign-up">Sign up</Link>
               </div>
             </DropdownMenuLabel>
           </DropdownMenuContent>
